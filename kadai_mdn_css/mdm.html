@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            position: relative;
+        }
+
+        div {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            
+            /*  要素を右に回転する (所要時間：5秒、infiniteで繰り返す)
+            参考
+            https://developer.mozilla.org/ja/docs/Web/CSS/CSS_animations
+             https://developer.mozilla.org/ja/docs/Web/CSS/animation
+            https://developer.mozilla.org/ja/docs/Web/CSS/@keyframes */
+            animation: rot 5s infinite; 
+        }
+
+        
+        @keyframes rot {
+            /* transform: rotate(角度); で傾ける
+                参考
+                https://developer.mozilla.org/ja/docs/Web/CSS/transform-function/rotate */
+            from {
+                
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        回転します
+    </div>
+
+</body>
+
+</html>
